@@ -1,0 +1,109 @@
+# ################################################################################################################################
+# Arquivo de template do gitignore para Django #
+# ################################################################################################################################
+
+# Arquivos gerados pelo PyCharm.
+
+# Ignorando toda a pasta para que o código funcione em qualquer IDE
+.idea /
+
+* .log
+* .pot
+* .pyc
+__pycache__
+db.sqlite3
+meios de comunicação
+
+# Arquivos de backup #
+* .bak
+
+# Python #
+* .py [ cod ]
+* $ py.class
+
+# Distribuição / embalagem
+.Python  build /
+ovos de desenvolvimento /
+dist /
+downloads /
+ovos /
+.eggs /
+lib /
+lib64 /
+partes /
+sdist /
+var /
+rodas /
+* .egg-info /
+.installed.cfg
+* .egg
+* .manifest
+* .spec
+
+# Registros do instalador
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Relatório de teste / cobertura de unidade
+htmlcov /
+.tox /
+.cobertura
+.cobertura. *
+.cache
+.pytest_cache /
+nosetests.xml
+cobertura.xml
+* .cover
+.hypothesis /
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# aipo
+agendamento de celerybeat. *
+
+# SageMath arquivos analisados
+* .sage.py
+
+# Ambientes
+.env
+.venv
+env /
+venv /
+ENV /
+env.bak /
+venv.bak /
+
+# documentação mkdocs
+/ site
+
+# mypy
+.mypy_cache /
+
+# Sublime Text #
+* .tmlanguage.cache
+* .tmPreferences.cache
+* .stTheme.cache
+* .sublime-workspace
+* .sublime-project
+
+# arquivo de configuração sftp
+sftp-config.json
+
+# Pacote de controle de arquivos específicos Pacote
+Control.last-run
+Control.ca-list
+Control.ca-bundle
+Control.system-ca-bundle
+GitHub.sublime-settings
+
+# Código Visual Studio #
+.vscode / *
+! .vscode / settings.json
+! .vscode / tasks.json
+! .vscode / launch.json
+! .vscode / extensions.json
+.história
