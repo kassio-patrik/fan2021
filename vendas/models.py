@@ -18,3 +18,11 @@ class Vendas(models.Model):
 
     def _str_(self):
         return str(self.pk) + ' - ' + self.nome
+
+
+class Produto(models.Model):
+    nome = models.CharField(max_length=255, blank=False, null=False)
+    valor = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
+
+    def _str_(self):
+        return self.nome + '. Valor: ' + str(self.valor)
