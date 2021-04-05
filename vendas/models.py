@@ -15,8 +15,10 @@ class Vendas(models.Model):
     email_cliente = models.EmailField(blank=True, null=True)
     venda_concluida = models.BooleanField(blank=False, null=False)
     qtd_itens = models.IntegerField(blank=True, null=False, default=0)
+    produtos = models.ManyToManyField('Produto')
+    cliente = models.ForeignKey('Cliente', on_delete=models.DO_NOTHING, default=1)
 
-    def _str_(self):
+    def __str__(self):
         return str(self.pk) + ' - ' + self.nome
 
 
@@ -24,5 +26,13 @@ class Produto(models.Model):
     nome = models.CharField(max_length=255, blank=False, null=False)
     valor = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False)
 
-    def _str_(self):
-        return self.nome + '. Valor: ' + str(self.valor)
+    def __str__(self):
+        return self.nome + '. R$: ' + str(self.valor)
+
+
+class Cliente(models.Model):
+    nome = models.CharField(max_length=255, blank=False, null=False)
+    cpf = models.CharField(max_length=11, blank=False, null=False)
+
+    def __str__(self):
+        return self.nome
